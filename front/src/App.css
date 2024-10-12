@@ -1,0 +1,132 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+button {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 50px;
+  background-color: #0078d4;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 120, 212, 0.2);
+margin: 10px;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #005fa3;
+  transform: scale(1.05);
+}
+
+.login-btn, .logout-btn {
+  font-size: 22px;
+  margin: 20px;
+}
+
+.welcome-message {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.camera-panel {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.camera-video {
+  width: 640px;
+  height: 480px;
+  border-radius: 12px;
+  border: 2px solid #0078d4;
+  margin-bottom: 15px;
+}
+
+.camera-btn, .capture-btn {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.image-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.status-message {
+  color: #ff9800;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.upload-btn, .submit-btn {
+  width: 45%;
+}
+
+@media (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .upload-btn, .submit-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.status-message {
+  animation: fadeIn 2s ease-out;
+}
